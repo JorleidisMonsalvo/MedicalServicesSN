@@ -1,25 +1,23 @@
-import { useState} from "react";
+import React from "react";
 import { useStateContext } from "../context/StateContext";
 
-const Login = () => {
-  const [loginInfo, setLoginInfo] = useState({
-    email: "",
-    password: "",
-  });
-  const { login } = useStateContext()
-
-  const handleSubmit = async () => {
-    await login(loginInfo)
-  };
-
-  const handleChange = (e) => {
-    setLoginInfo({...loginInfo, [e.target.name]: e.target.value})
-  }
+const SignUp = () => {
+  const businessOptions = ["Pharmacy", "Laboratory", "Medical Service"];
+  const signUp = useStateContext()
   return (
     <div className="login-container">
       <div className="login-card">
         <h1>Welcome to Medical Services!</h1>
-        <span>Log In</span>
+        <span>Sign Up</span>
+        <label className="form-item">
+          Name:
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Insert your name"
+          />
+        </label>
         <label className="form-item">
           Email:
           <input
@@ -27,7 +25,6 @@ const Login = () => {
             id="email"
             name="email"
             placeholder="Insert your email address"
-            onChange={handleChange}
           />
         </label>
         <label className="form-item">
@@ -38,15 +35,22 @@ const Login = () => {
             name="password"
             placeholder="Insert a password"
             min="6"
-            onChange={handleChange}
           />
         </label>
+        <label className="form-item">
+          Type of business:
+          <select name="business" id="business">
+            {businessOptions.map((el, i) => (
+              <option value={el} key={i}>{el}</option>
+            ))}
+          </select>
+        </label>
         <button className="form-item" onClick={handleSubmit}>
-          Log In!
+          Sign up!
         </button>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;

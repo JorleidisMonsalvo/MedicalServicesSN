@@ -19,8 +19,340 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
 }
+
+/* Layout styles */
+.main-container {
+  max-width: 100vw;
+  margin: auto;
+
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  background-color:#E4C1F9;
+  color: white;
+  gap: 10%;
+  height: 15%;
+}
+
+.navbar-logo {
+  font-size: 2em;
+  margin: 5px 15px;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1,1.1);
+}
+
+.navbar-item {
+  font-size: 1.2rem;
+  margin: 5px 5%;
+  flex-grow: 1;
+  text-align: end;
+  align-self: center;
+}
+
+.navbar-item:hover {
+  transform: scale(1.1,1.1);
+}
+
+
+/* Login styles  */
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(115, 0, 113, 0.5);
+  transition: 0.3s;
+  padding-bottom: 40px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(228, 193, 249, 0.5);
+  color: #390040;
+}
+
+.login-card span {
+  font-size: 1.5rem;
+}
+
+/*Form styles */
+.form-item {
+  font-size: 1.2rem;
+
+}
+
+.form-item input {
+  margin: 10px 10px;
+  border: none;
+  padding: 5px;
+  font-size: 1.1rem;
+  border-radius: 5%;
+}
+
+.form-item select {
+  margin: 15px 10px;
+  border: none;
+  padding: 5px;
+  font-size: 1.1rem;
+  color: gray;
+}
+
+.login-card button {
+  padding: 5px 10px 10px;
+  border: none;
+  width: fit-content;
+  align-self: center;
+  background-color: #390040;
+  color: white;
+  border-radius: 10%;
+}
+
+/* Logout style */
+.logout-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 9;
+  font-size: 4rem;
+  justify-content: center;
+  color: #E4C1F9;
+}
+
+.logout-text h4 {
+  text-shadow: 2px 2px #390040;
+}
+
+.logout-text img {
+  width: 200px;
+  height: 200px;
+}
+
+/* Home page styles */
+
+.business-icons {
+  font-size: 5rem;
+}
+
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.home-container span {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #390040;
+  font-size: 1.5rem;
+}
+
+.home-cards-container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.home-card {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(115, 0, 113, 0.5);
+  border-radius: 20px;
+  color: #390040;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-card span {
+  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.home-card:hover {
+  transform: scale(1.1,1.1);
+}
+
+.posts-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts-main-container button {
+  color: white;
+  background-color: #390040;
+  border: none;
+  width: fit-content;
+  padding: 5px;
+  margin: 20px 20px 0 20px;
+  border-radius: 5px;
+}
+
+.posts-main-container button:hover {
+  transform: scale(1.1);
+}
+/* Posts style */
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  width: 300px;
+  height: max-content;
+  box-shadow: 0 4px 8px 0 rgba(115, 0, 113, 0.5);
+  border-radius: 10%;
+  align-items: center;
+  background-color: white;
+  color: #390040;
+}
+
+.post-card:hover {
+  transform: scale(1.1,1.1);
+  transition-duration: 10ms;
+}
+
+.post-card span {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-card img {
+  width: 200px;
+  border-radius: 10%;
+}
+
+.post-card  p {
+  font-size: 1rem;
+}
+
+.post-card button {
+  color: white;
+  background-color: #390040;
+  font-size: 1.2rem;
+  border-radius: 15%;
+  margin-bottom: 10px;
+}
+
+/* Post style */
+.posts-main-container button {
+  margin-left: 10%;
+  font-size: 1.2rem;
+  width: max-content;
+}
+
+.post-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  color: #390040;
+}
+
+.post-container span {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.post-container p {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-container img {
+  width: 400px;
+}
+
+.post-container a {
+  font-size: 1.2rem;
+}
+
+/*Add post styles */
+.add-post-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-post-container h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #390040;
+
+}
+
+.post-form-item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 5px;
+  color: #390040;
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+.post-form-item input {
+  border:3px solid #E4C1F9;
+  border-radius: 5px;
+}
+
+.post-form-item textarea {
+  border:3px solid #E4C1F9;
+  border-radius: 5px;
+}
+
+.post-form-button {
+  margin-top: 10px;
+  background-color: #390040;
+  color: white;
+  width: fit-content;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.post-form-files-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: -5px;
+  gap: 10px;
+}
+
+.post-form-files-list span {
+  color: black;
+  font-size: 1rem;
+}
+
