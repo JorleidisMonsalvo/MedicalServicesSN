@@ -13,8 +13,8 @@ const Profile = () => {
     getData();
   }, [posts]);
 
-  let id = authUser.user !== undefined ? authUser.user.uid : authUser.uid;
-  let arr = posts.filter((e) => e.userId === id);
+  let id = authUser?.user !== undefined ? authUser.user.uid : authUser?.uid;
+  let arr = posts?.filter((e) => e.userId === id);
   
   return (
     <>

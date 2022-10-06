@@ -8,8 +8,8 @@ function AddPost() {
     name: "",
     description: "",
     files: [],
-    business: authUser.user !== undefined ? authUser.user.business : authUser.business,
-    userId: authUser.user !== undefined ? authUser.user.uid : authUser.uid,
+    business: authUser?.user !== undefined ? authUser.user.business : authUser?.business,
+    userId: authUser?.user !== undefined ? authUser.user.uid : authUser?.uid,
   });
   console.log(postInfo.business)
   const handleChange = (e) => {
@@ -34,8 +34,6 @@ function AddPost() {
       return {url: url, name: file.name};
     });
     postInfoCopy.files = onlyUrls;
-    console.log(postInfoCopy)
-    console.log(postInfoCopy.business)
     addNewPost(postInfoCopy);
   };
 
