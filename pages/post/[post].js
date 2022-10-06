@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useStateContext } from "../../context/StateContext";
 import { FaFileAlt } from "react-icons/fa";
+import Link from 'next/link'
 const PostDetail = () => {
   const router = useRouter();
   const { post } = router.query;
@@ -30,7 +31,9 @@ const PostDetail = () => {
       <p>Files:</p>
       {
         postInfo?.files?.map((file, i)=>(
-          <a key={i} href={file} download target='_blank'><FaFileAlt/> file {i+1}</a>
+          <Link href={''}>
+          <a key={i} href={file.url} download target='_blank'><FaFileAlt/> {file.name}</a>
+          </Link>
         ))
       }
     </div>
