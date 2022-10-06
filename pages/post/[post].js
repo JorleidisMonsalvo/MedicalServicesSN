@@ -31,9 +31,8 @@ const PostDetail = () => {
       <p>Files:</p>
       {
         postInfo?.files?.map((file, i)=>(
-          <Link href={''} key={i}>
-          <a key={i} href={file.url} download target='_blank'><FaFileAlt/> {file.name}</a>
-          </Link>
+          <a key={i} href={file.url} download target='_blank' rel="noopener noreferrer"><FaFileAlt/> {file.name}</a>
+          
         ))
       }
     </div>
